@@ -1,10 +1,14 @@
 package com.arctouch.codechallenge.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.squareup.moshi.Json;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Movie {
+public class Movie implements Serializable {
     public int id;
     public String title;
     public String overview;
@@ -65,4 +69,6 @@ public class Movie {
                 ", releaseDate='" + releaseDate + '\'' +
                 '}';
     }
+
+
 }
